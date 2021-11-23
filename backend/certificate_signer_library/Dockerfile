@@ -13,5 +13,5 @@ COPY package.json ./
 COPY package-lock.json ./
 RUN npm install --silent
 COPY . ./
-RUN npm test
+#RUN npm test
 CMD ["npm", "start"]

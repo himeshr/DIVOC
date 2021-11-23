@@ -58,5 +58,5 @@ registry:
   searchoperationid: search
   readoperationid: read
 keycloak:
-  url: https://divoc.xiv.in/keycloak/auth
+  url: http://keycloak:8080/auth
   realm: divoc

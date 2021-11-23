@@ -155,7 +155,7 @@ services:
       REGISTRY_WITH_ES_URL: "http://registry-es:8081"
       KEYCLOAK_URL: "http://keycloak:8080/auth"
       CLICK_HOUSE_URL: tcp://clickhouse-server:9000?debug=true
-      ADMIN_API_CLIENT_SECRET: 20dc0bc2-1aa4-4ca3-9808-aabfc50b1d6c
+      ADMIN_API_CLIENT_SECRET: 1c892da2-e4d6-411d-a4cf-6797c0a0bf41
       DB_HOST: db
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
     depends_on:
@@ -236,7 +236,7 @@ services:
       REGISTRY_URL: "http://registry:8081"
       REGISTRY_WITH_ES_URL: "http://registry-es:8081"
       KEYCLOAK_URL: "http://keycloak:8080/auth"
-      ADMIN_API_CLIENT_SECRET: 20dc0bc2-1aa4-4ca3-9808-aabfc50b1d6c
+      ADMIN_API_CLIENT_SECRET: 1c892da2-e4d6-411d-a4cf-6797c0a0bf41
     depends_on:
       registry:
         condition: service_started
@@ -293,8 +293,6 @@ services:
       portal_api:
         condition: service_started
       registration_api:
-        condition: service_started
-      digilocker_support_api:
         condition: service_started
   notification-service:
     image: dockerhub/notification-service
