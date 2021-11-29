@@ -38,6 +38,6 @@ var Config = struct {
 		Enable      bool   `env:"ENABLE_EMAIL" yaml:"enable"`
 	}
 	CommunicationMode struct {
-		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"rabbitmq" `
+		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"kafka" `
 	}
 }{}

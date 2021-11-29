@@ -85,7 +85,7 @@ var Config = struct {
 		LengthOfSuffixedEnrollmentCode int `default:"10" yaml:"lengthofsuffixedenrollmentcode"`
 	}
 	CommunicationMode struct {
-		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"rabbitmq" `
+		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"kafka" `
 	}
 }{}
 

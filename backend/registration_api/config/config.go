@@ -55,7 +55,7 @@ var Config = struct {
 		ScheduleDays   int `default:"100"`
 	}
 	CommunicationMode struct {
-		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"rabbitmq" `
+		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"kafka" `
 	}
 	MockOtp                      bool   `default:"true" env:"MOCK_OTP"`
 	MinCancellationHours         int    `default:"24"`
