@@ -2,6 +2,7 @@ package config
 
 import (
 	"errors"
+
 	"github.com/imroc/req"
 	"github.com/jinzhu/configor"
 	log "github.com/sirupsen/logrus"
@@ -16,10 +17,10 @@ var Config = struct {
 		OTPLength            int    `yaml:"otp_length" env:"OTP_LENGTH" default:"6"`
 	}
 	Keycloak struct {
-		Pubkey               string `env:"PUBLIC_KEY"`
-		Url                  string `env:"KEYCLOAK_URL"`
-		Realm                string `env:"KEYCLOAK_REALM"`
-		Enable               bool   `env:"ENABLE_KEYCLOAK" default:"true"`
+		Pubkey string `env:"PUBLIC_KEY"`
+		Url    string `env:"KEYCLOAK_URL"`
+		Realm  string `env:"KEYCLOAK_REALM"`
+		Enable bool   `env:"ENABLE_KEYCLOAK" default:"true"`
 	}
 	Kafka struct {
 		BootstrapServers          string `env:"KAFKA_BOOTSTRAP_SERVERS" yaml:"bootstrapservers"`
@@ -31,7 +32,7 @@ var Config = struct {
 		CertifiedTopic            string `default:"certified" yaml:"certifiedtopic"`
 	}
 	Rabbitmq struct {
-		RabbitmqServers          string `env:"RABBITMQ_SERVER" yaml:"rabbitmqServers"`
+		RabbitmqServers           string `env:"RABBITMQ_SERVER" yaml:"rabbitmqServers"`
 		NotifyTopic               string `default:"notify" yaml:"notifyTopic"`
 		EnrollmentTopic           string `default:"enrollment" yaml:"enrollmenttopic"`
 		EnrollmentACKTopic        string `default:"enrollment_ack" yaml:"enrollmentacktopic"`
@@ -55,7 +56,7 @@ var Config = struct {
 		ScheduleDays   int `default:"100"`
 	}
 	CommunicationMode struct {
-		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"kafka" `
+		Mode string `yaml:"mode" env:"COMMUNICATION_MODE" default:"rabbitmq" `
 	}
 	MockOtp                      bool   `default:"true" env:"MOCK_OTP"`
 	MinCancellationHours         int    `default:"24"`
